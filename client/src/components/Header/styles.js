@@ -11,6 +11,13 @@ const Title = styled.h1`
   z-index: 2;
   transform: skew(-7deg);
   text-align: center;
+  a {
+    padding: 0.5rem 1rem;
+    background: ${props => props.theme.red};
+    color: ${props => props.theme.offWhite};
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 `;
 
 export { Title, StyledHeader };

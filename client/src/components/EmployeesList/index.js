@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchItems } from '../../redux/actions';
 import SingleEmployee from '../SingleEmployee';
+import { List, Button, Wrapper, InfoText } from './styles';
 
 class EmployeesList extends Component {
   componentDidMount() {
@@ -14,16 +15,29 @@ class EmployeesList extends Component {
 
   render() {
     const { items, hasErrored, isLoading } = this.props;
-    if (isLoading) return <p>Loading...</p>;
+
+    if (isLoading)
+      return (
+        <Wrapper>
+          <InfoText>Loading...</InfoText>
+        </Wrapper>
+      );
     if (hasErrored)
       return (
-        <button onClick={() => this.handleButtonClick()}>
-          Error! Try again?
-        </button>
+        <Wrapper>
+          <Button onClick={() => this.handleButtonClick()}>
+            <InfoText>Error! Try again?</InfoText>
+          </Button>
+        </Wrapper>
       );
-    return items.map(employee => (
-      <SingleEmployee singleEmployee={employee} key={employee.uuid} />
-    ));
+    return (
+      <List>
+        {items.map(employee => (
+          <SingleEmployee singleEmployee={employee} key={employee.uuid} />
+        ))}
+        ;
+      </List>
+    );
   }
 }
 

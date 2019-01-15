@@ -4,13 +4,12 @@ const theme = {
   red: '#FF0000',
   black: '#393939',
   offWhite: '#EDEDED',
-  maxWidth: '1000px',
-  bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)'
+  maxWidth: '1000px'
 };
 
 const GlobalStyle = createGlobalStyle`
-  font-family: "Courier New", Courier, monospace
   html {
+    font-family: "Bookman Old Style", Courier, monospace;
     box-sizing: border-box;
     font-size: 10px;
   }

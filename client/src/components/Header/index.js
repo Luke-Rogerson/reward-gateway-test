@@ -4,7 +4,9 @@ import { Title, StyledHeader } from './styles';
 const Header = () => {
   return (
     <StyledHeader>
-      <Title>Employee List App</Title>
+      <Title>
+        <a href='contact@lukerogerson.me'>Employee List App</a>
+      </Title>
     </StyledHeader>
   );
 };
