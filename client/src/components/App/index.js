@@ -12,7 +12,6 @@ class App extends React.Component {
           <GlobalStyle />
           <Header />
           <MainPage>
-            <button>GO!</button>
             <Inner>
               <EmployeesList />
             </Inner>
